@@ -17,12 +17,19 @@ public:
 		avg_mark = 0;
 	}
 
-	void init(string n, string sname, int a, float mark) {
-		name = "no name";
-		surname = "no surname";
-		age = 16;
-		avg_mark = 4;
+	Student(string n, string sname, int a, float mark) {
+		name = n;
+		surname = sname;
+		age = a;
+		avg_mark = mark;
 	}
+
+	void init(string n, string sname, int a, float mark) {
+	name = n;
+		surname = sname;
+		age = a;
+		avg_mark = mark;
+	}	
 
 	string convert_to_string() {
 		return name + " " + surname + " (age = " + to_string(age)
@@ -43,8 +50,10 @@ Student get_best_student(Student st1, Student st2, Student st3) {
 }
 
 int main() {
-	Student st1, st2, st3;
-	
+	Student st1("Ivan", "Ivanov", 14, 10);
+	Student st2("Genrih", "Gurshtinovich", 14, 9);
+	Student st3("Tigran", "Sarkesya", 14, 4);
+
 	cout << st1.convert_to_string() << endl;
 	cout << st2.convert_to_string() << endl;
 	cout << st3.convert_to_string() << endl;
